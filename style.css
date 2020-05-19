@@ -63,7 +63,7 @@ header .logo {
 
 /*-- NAV POSITION --*/
 .left-nav, .right-nav {
-  padding: 0 2em;
+  padding: 0 2em 0 0;
 }
 
 .right-nav .right-link, .right-nav .right-icon {
@@ -83,7 +83,7 @@ header .logo {
 .cover-text {
   height: 270px;
   width: 80%;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   align-items: center;
@@ -144,5 +144,78 @@ button {
   font-weight: var(--main-weight);
 }
 
-
 /*********** FIRST SECTION ******************/
+
+/*********** SECOND SECTION *****************/
+#video {
+  height: 580px;
+  display: flex;
+  justify-content: center; 
+  font-family: var(--main-font);
+  font-weight: var(--main-weight);
+}
+
+.top-block {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: -4em;
+  background-color: white;
+}
+
+span {
+  width: 100%;
+}
+
+span h2 {
+  margin: auto;
+  font-size: 32px;
+  font-family: var(--second-font);
+  text-align: center;
+  padding: 1em;
+
+}
+
+/*-- GRID LECTEUR --*/
+
+.grid-container {
+  color: #8D8E93;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
+  grid-template-rows: 33% 33% 33%;
+  grid-template-areas: 'arg_1 video arg_4'
+                       'arg_2 video arg_5'
+                       'arg_3 video arg_6';
+            
+}
+
+.video-lecteur {
+  grid-area: video;
+}
+
+.arg_1 {
+  grid-area: arg_1;
+}
+
+.arg_2 {
+  grid-area: arg_2;
+}
+
+.arg_3 {
+  grid-area: arg_3;
+}
+
+.arg_4 {
+  grid-area: arg_4;
+}
+
+.arg_5 {
+  grid-area: arg_5;
+}
+
+.arg_6 {
+  grid-area: arg_6;
+}
