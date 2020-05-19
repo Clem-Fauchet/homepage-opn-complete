@@ -1,0 +1,148 @@
+:root {
+  --main-font: 'Prompt', sans-serif;
+  --second-font: 'Playfair Display', serif;
+  --main-weight: 800;
+  --main-color: white;
+  --nav-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: 1440px;
+}
+
+
+/*********** FIRST SECTION ******************/
+#cover {
+  height: 620px;
+  background-image: url('assets/img/cover/cover.png')  ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+ /**** NAVIGATION ****/
+
+header {
+  width: 80%;
+  padding: 40px 0px;
+  display: flex;
+  font-family: var(--second-font);
+  font-size: var(--nav-size);
+}
+
+header nav li {
+  list-style: none;
+}
+
+header .left-nav, header .right-nav {
+  display: flex;
+  width: 45%;
+  height: 20px;
+  justify-content: space-between;
+}
+
+header .logo {
+  margin: 0em 4em;
+  align-self: flex-start;
+  margin-top: -1em;
+}
+
+/*-- NAV POSITION --*/
+.left-nav, .right-nav {
+  padding: 0 2em;
+}
+
+.right-nav .right-link, .right-nav .right-icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-link {
+  width: 50%;
+}
+
+.right-icon {
+  width: 30%;
+}
+
+/**** COVER TEXT ****/
+.cover-text {
+  height: 270px;
+  width: 80%;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  align-items: center;
+}
+
+/*-- TITLE -*/
+.title {
+  grid-column: 1/2;
+  align-self: flex-start;
+}
+
+h1 {
+  font-size: 74px;
+  font-weight: 400;
+}
+
+/*-- DESCR --*/
+
+.description {
+  grid-column: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  font-family: var(--main-font);
+  font-size: 15px;
+  font-weight: var(--main-weight);
+}
+
+h3 {
+  font-family: var(--second-font);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+p {
+  width: 80%;
+}
+
+a, a:focus {
+  color: white;
+  text-transform:  uppercase;
+  font-size: 11px;
+  padding: 0 0.5em;
+  vertical-align: middle;
+  letter-spacing: 2px;
+}
+
+button {
+  height: 54px;
+  width: 280px;
+  border: none;
+  border-radius: 27px;
+  background-color: white;
+  color: black;
+  font-family: var(--main-font);
+  font-size: 15px;
+  font-weight: var(--main-weight);
+}
+
+
+/*********** FIRST SECTION ******************/

@@ -1,0 +1,8 @@
+{
+  "beautify.config": "",
+  "beautify.language": {
+    "html": {},
+  },
+  "prettier.htmlWhitespaceSensitivity": "strict",
+  "prettier.singleQuote": true
+}
