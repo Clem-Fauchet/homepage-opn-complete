@@ -148,6 +148,7 @@ header .logo {
 object.top-icon {
 	margin: 0 1em;
 }
+
 /**** HEADER ****/
 
 /*********** FIRST SECTION ******************/
@@ -393,18 +394,22 @@ svg.hidden {
 	height: 807px;
 	font-family: var(--main-font);
 	font-size: var(--nav-size);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 80%;
 }
 
-.grid-container-blog {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: 1fr 1fr 2fr 1fr 1fr 2fr 1fr;
-	align-items: center;
+#blog .blog-separation {
+	width: 80%;
+	margin: auto;
+	border-bottom: 1px solid #e2e2e5;
+	display: flex;
+	justify-content: center;
 }
 
 #blog button {
-	grid-column: span 4;
-	margin: auto;
 	width: 200px;
 	height: 36px;
 	border: 1px solid #231f10;
@@ -412,12 +417,13 @@ svg.hidden {
 	background-color: white;
 	font-family: var(--main-font);
 	font-size: 12px;
+	text-align: center;
+	margin-bottom: 1em;
 }
 
 /*-- TITLE BLOCK --*/
-#blog .title,
-#blog h3 {
-	grid-column: span 4;
+#blog .title {
+	width: 100%;
 	text-align: center;
 }
 
@@ -432,10 +438,19 @@ svg.hidden {
 	color: #8d8e93;
 }
 
+#blog h3 {
+	text-align: center;
+	padding: 1em 0 0.5em;
+}
+
 /*-- ARTICLE BLOCK --*/
-#article {
-	width: 100%;
-	height: 100%;
+#article,
+#cocktails {
+	width: 80%;
+	margin: 1em 0;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
 }
 
 #article figure.article-item {
@@ -479,7 +494,7 @@ svg.hidden {
 }
 
 #cocktails figure figcaption {
-	width: 100%;
+	width: 150%;
 }
 
 #cocktails figure div.arome {

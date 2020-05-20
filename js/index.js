@@ -1,3 +1,24 @@
+/******* PC CLONAGE ITEMS BLOG  *********/
+const Article = () => {
+	const cloneArticle = document.querySelector('.article-item').cloneNode(true)
+	document.getElementById('article').appendChild(cloneArticle)
+}
+
+Article()
+Article()
+Article()
+
+const Cocktail = () => {
+	const cloneCocktail = document
+		.querySelector('.cocktails-item')
+		.cloneNode(true)
+	document.getElementById('cocktails').appendChild(cloneCocktail)
+}
+
+Cocktail()
+Cocktail()
+Cocktail()
+
 /*****MOBILE NAVIGATION ANIMATION ****/
 
 const navMobile = () => {
