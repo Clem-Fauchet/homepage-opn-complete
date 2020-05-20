@@ -1,0 +1,110 @@
+:root {
+	--main-font: 'Exo', sans-serif;
+	--second-font: 'Playfair Display', serif;
+	--main-weight: 800;
+	--nav-size: 16px;
+}
+
+/************* MOBILE ANIMATION ****************/
+
+@media screen and (max-width: 991px) {
+	div.container {
+		position: relative;
+	}
+
+	/*** POSITION RIGHT NAV ***/
+	#cover header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 9999999;
+		height: 100vh;
+		width: 335px;
+		background-color: #f5f6f6;
+		display: flex;
+		flex-direction: column;
+		font-size: var(--nav-size);
+		letter-spacing: 0.03em;
+		color: black;
+	}
+
+	#cover header nav li,
+	nav li.big-menu {
+		display: block;
+	}
+
+	#cover object.center-line {
+		position: static;
+	}
+
+	#cover header nav .right-icon {
+		display: none;
+	}
+
+	header nav.left-nav,
+	header nav.right-nav,
+	header nav .right-link {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	header div.logo {
+		order: 1;
+		width: 100%;
+		height: 59px;
+		margin: 0;
+		border-bottom: 1px solid #e2e2e5;
+		padding: 0 1em;
+	}
+
+	header div.logo object {
+		display: block;
+		height: 24px;
+	}
+
+	header div.logo img {
+		display: none;
+	}
+
+	header nav.left-nav,
+	header nav.right-nav {
+		width: 80%;
+		height: auto;
+		margin: 2em auto;
+	}
+
+	header nav.right-nav .right-link {
+		width: 100%;
+	}
+
+	header nav.left-nav {
+		order: 2;
+		border-bottom: 1px solid #e2e2e5;
+	}
+
+	header nav.right-nav {
+		order: 3;
+	}
+
+	header nav.left-nav li,
+	header nav.right-nav li {
+		padding: 1em;
+	}
+
+	header nav li.big-menu {
+		font-weight: var(--main-weight);
+		text-transform: uppercase;
+	}
+
+	header nav li a {
+		color: black;
+	}
+
+	/*-- BURGER ANIMATION --*/
+	header .burger {
+		position: absolute;
+		top: 0px;
+		right: -40px;
+	}
+}

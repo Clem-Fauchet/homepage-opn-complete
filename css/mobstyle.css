@@ -19,6 +19,23 @@ section {
 }
 
 /**** HEADER ****/
+header {
+	height: 60px;
+	/* background-color: white; */
+	width: 100%;
+}
+
+/*-- BURGER MENU --*/
+header .burger {
+	display: block;
+}
+
+header .burger div {
+	width: 16px;
+	height: 2.5px;
+	background-color: white;
+	margin: 3px;
+}
 
 header .left-nav li,
 .right-nav li {
