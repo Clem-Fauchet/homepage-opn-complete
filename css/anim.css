@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 991px) {
 	/*** POSITION RIGHT NAV ***/
-	#cover header.mobile {
+	header.mobile {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -55,19 +55,19 @@
 
 	/*-- ANIMATION NAV --*/
 
-	#cover header.mobile nav li,
+	header.mobile nav li,
 	nav li.big-menu {
 		display: block;
 	}
 
-	#cover object.center-line {
+	object.center-line {
 		position: static;
 		margin-top: 1em;
 		width: 12px;
 		transform: translateY(10px);
 	}
 
-	#cover header.mobile nav .right-icon {
+	header.mobile nav .right-icon {
 		display: none;
 	}
 

@@ -15,7 +15,7 @@ section {
 			#231f107a 18.51%,
 			rgba(35, 29, 16, 0) 93.63%
 		),
-		url('/assets/img/cover/coverphone.png');
+		url('../assets/img/cover/coverphone.png');
 	mix-blend-mode: multiply;
 }
 

@@ -7,6 +7,10 @@
 	--title-margin: 1.2em 0 1em;
 }
 
+div.container {
+	position: relative;
+}
+
 section {
 	width: 1440px;
 	position: relative;
@@ -76,15 +80,7 @@ section object.center-line {
 
 /****** STICKY BAR ******/
 
-/*********** FIRST SECTION ******************/
-#cover {
-	height: 620px;
-	background-image: url('../assets/img/cover/cover.png');
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	color: white;
-}
+/****** HEADER ******/
 
 /**** NAVIGATION ****/
 header .burger {
@@ -92,11 +88,13 @@ header .burger {
 }
 
 header {
-	width: 80%;
+	width: 60%;
 	padding: 40px 0px;
 	display: flex;
 	font-family: var(--second-font);
 	font-size: var(--nav-size);
+	position: absolute;
+	z-index: 99999;
 }
 
 header div.logo object {
@@ -150,6 +148,17 @@ header .logo {
 object.top-icon {
 	margin: 0 1em;
 }
+/**** HEADER ****/
+
+/*********** FIRST SECTION ******************/
+#cover {
+	height: 620px;
+	background-image: url('../assets/img/cover/cover.png');
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	color: white;
+}
 
 /**** COVER TEXT ****/
 .cover-text {
@@ -158,7 +167,7 @@ object.top-icon {
 	margin-bottom: 120px;
 	display: grid;
 	grid-template-columns: 33% 33% 33%;
-	align-items: center;
+	align-items: flex-end;
 }
 
 /*-- TITLE -*/
