@@ -8,10 +8,6 @@
 /************* MOBILE ANIMATION ****************/
 
 @media screen and (max-width: 991px) {
-	div.container {
-		position: relative;
-	}
-
 	/*** POSITION RIGHT NAV ***/
 	#cover header.mobile {
 		position: fixed;
