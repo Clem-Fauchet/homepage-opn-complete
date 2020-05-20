@@ -7,19 +7,8 @@ section {
 	width: 375px;
 }
 
-/*********** FIRST SECTION ******************/
-#cover {
-	height: 530px;
-	background: linear-gradient(
-			46.21deg,
-			#231f107a 18.51%,
-			rgba(35, 29, 16, 0) 93.63%
-		),
-		url('../assets/img/cover/coverphone.png');
-	mix-blend-mode: multiply;
-}
+/***** HEADER *****/
 
-/**** HEADER ****/
 header {
 	height: 60px;
 	/* background-color: white; */
@@ -72,6 +61,19 @@ header div.logo {
 
 header div.logo img {
 	width: 70px;
+}
+/****** HEADER *****/
+
+/*********** FIRST SECTION ******************/
+#cover {
+	height: 530px;
+	background: linear-gradient(
+			46.21deg,
+			#231f107a 18.51%,
+			rgba(35, 29, 16, 0) 93.63%
+		),
+		url('../assets/img/cover/coverphone.png');
+	mix-blend-mode: multiply;
 }
 
 /**** COVER TEXT ****/
@@ -129,4 +131,77 @@ header div.logo img {
 /*********** SECOND SECTION ******************/
 #video .top-block {
 	margin-top: 0;
+	width: 100%;
+}
+
+section object.center-line {
+	top: -2em;
+}
+
+#video span h2 {
+	font-size: var(--title-size);
+}
+
+/*-- GRID LECTEUR --*/
+.grid-container-video {
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr 0.5fr 0.5fr;
+	align-items: flex-start;
+}
+
+.video-lecteur {
+	grid-column: 1/3;
+	grid-row: 1/2;
+}
+
+.video-lecteur img {
+	width: 100%;
+}
+
+/*-- CAROUSEL ARGUMENT --*/
+
+.arg_1,
+.arg_2,
+.arg_3,
+.arg_4,
+.arg_5,
+.arg_6 {
+	grid-column: 1/3;
+	grid-row: 2/3;
+}
+
+.arg_2 {
+	transform: translateX(100%);
+}
+
+.arg_3 {
+	transform: translateX(200%);
+}
+
+.arg_4 {
+	transform: translateX(300%);
+}
+
+.arg_5 {
+	transform: translateX(400%);
+}
+
+.arg_6 {
+	transform: translateX(500%);
+}
+
+.dot-nav-mobile {
+	display: block;
+	grid-column: 1/3;
+	grid-row: 3/4;
+	text-align: center;
+}
+
+.grid-container-video .btn {
+	height: 8px;
+	width: 8px;
+	margin: 0 0.25em;
+}
+svg.btn circle {
+	fill: #e2e2e5;
 }

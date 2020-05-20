@@ -185,3 +185,18 @@ header.mobile .burger.cross .line_3 {
 	transform: rotate(45deg) translate(1px, -8px);
 	width: 24px;
 }
+
+/*-- BURGER ANIMATION --*/
+
+/*-- CAROUSEL ANIMATION --*/
+.grid-container-video {
+	transition: transform 0.5s ease;
+}
+
+.dot-nav-mobile svg.active {
+	transform: scale(2);
+}
+
+.dot-nav-mobile svg.active circle {
+	fill: #dfb57b;
+}

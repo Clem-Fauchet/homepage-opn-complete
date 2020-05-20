@@ -308,6 +308,11 @@ section object.center-line {
 	grid-area: arg_6;
 }
 
+.dot-nav-mobile,
+svg.hidden {
+	display: none;
+}
+
 /*********** SECOND SECTION *****************/
 
 /*********** THIRD SECTION *****************/

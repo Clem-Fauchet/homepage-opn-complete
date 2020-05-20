@@ -23,8 +23,37 @@ const navMobile = () => {
 	})
 }
 
+/*****MOBILE CAROUSEL ANIMATION ****/
+
+const navCarousel = () => {
+	const slider = document.querySelectorAll('.argument')
+	const dots = document.querySelectorAll('.btn')
+
+	let activeDotNum = 0
+
+	dots.forEach((dot, index) => {
+		dot.setAttribute('data-num', index)
+
+		dot.addEventListener('click', (e) => {
+			let clickedDotNum = e.target.dataset.num
+
+			if (clickedDotNum == activeDotNum) {
+				return
+			} else {
+				let pixelsToMove = 100
+				dots[activeDotNum].classList.remove('active')
+				dots[clickedDotNum].classList.add('active')
+				slider.style.transform =
+					'translateX(' + pixelsToMove + ' % * ' + index + ')' /// PROBLEME ITEM SVG
+			}
+		})
+	})
+}
+
+/***** FUNCTION CALL ******/
 const app = () => {
 	navMobile()
+	navCarousel()
 }
 
 app()
