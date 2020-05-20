@@ -1,10 +1,83 @@
+:root {
+	--main-size: 15px;
+}
+
 section {
 	width: 375px;
 }
 
 /*********** FIRST SECTION ******************/
+#cover {
+	height: 530px;
+	background: linear-gradient(
+			46.21deg,
+			#231f107a 18.51%,
+			rgba(35, 29, 16, 0) 93.63%
+		),
+		url('/assets/img/cover/coverphone.png');
+	mix-blend-mode: multiply;
+}
+
+/**** HEADER ****/
+
 header .left-nav li,
 .right-nav li {
+	display: none;
+}
+
+header object.home {
+	display: none;
+}
+
+/**** COVER TEXT ****/
+.cover-text {
+	margin-bottom: 1em;
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.title,
+.description {
+	align-self: flex-start;
+}
+
+/*-- TITLE -*/
+.title h1 {
+	font-size: var(--title-size);
+	font-size: 32px;
+	margin: 0.5em 0;
+}
+
+/*-- DESCR -*/
+#cover .description {
+	width: 100%;
+}
+
+.description h3 {
+	font-size: 18px;
+}
+
+.description p,
+.description span {
+	display: none;
+}
+
+#cover button {
+	font-size: var(--main-size);
+	margin: auto;
+	width: 100%;
+}
+
+#cover a {
+	font-size: 11px;
+	margin: auto;
 }
 
 /*********** FIRST SECTION ******************/
+#video,
+#blog,
+#app {
+	display: none;
+}

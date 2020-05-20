@@ -1,3 +1,12 @@
+:root {
+	--main-font: 'Exo', sans-serif;
+	--second-font: 'Playfair Display', serif;
+	--main-weight: 800;
+	--nav-size: 16px;
+	--title-size: 32px;
+	--title-margin: 1.2em 0 1em;
+}
+
 section {
 	width: 1440px;
 	position: relative;
@@ -137,7 +146,7 @@ object.top-icon {
 	align-self: flex-start;
 }
 
-h1 {
+.title h1 {
 	font-size: 74px;
 	font-weight: 400;
 }
@@ -154,13 +163,14 @@ h1 {
 	font-size: 15px;
 }
 
-#cover h3 {
+.description h3 {
 	font-family: var(--second-font);
 	font-size: 24px;
 	font-weight: 400;
+	text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
 }
 
-#cover p {
+.description p {
 	width: 80%;
 }
 

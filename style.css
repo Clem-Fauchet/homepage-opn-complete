@@ -2,16 +2,6 @@
 @import url('css/pcstyle.css') screen;
 @import url('css/mobstyle.css') screen and (max-width: 991px);
 
-:root {
-	--main-font: 'Exo', sans-serif;
-	--second-font: 'Playfair Display', serif;
-	--main-weight: 800;
-	--main-color: white;
-	--nav-size: 16px;
-	--title-size: 32px;
-	--title-margin: 1.2em 0 1em;
-}
-
 * {
 	margin: 0;
 	padding: 0;
