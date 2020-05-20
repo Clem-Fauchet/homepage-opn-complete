@@ -4,5 +4,7 @@
     "html": {},
   },
   "prettier.htmlWhitespaceSensitivity": "strict",
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "autoprefixer.formatOnSave": true,
+  "editor.formatOnSave": true
 }

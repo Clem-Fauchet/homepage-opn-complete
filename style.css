@@ -1,9 +1,14 @@
+@import url('css/anim.css') screen;
+@import url('css/mobstyle.css') screen and (max-width: 991px);
+
 :root {
-  --main-font: 'Prompt', sans-serif;
+  --main-font: 'Exo', sans-serif;
   --second-font: 'Playfair Display', serif;
   --main-weight: 800;
   --main-color: white;
   --nav-size: 16px;
+  --title-size: 32px;
+  --title-margin: 1.2em 0 1em;
 }
 
 * {
@@ -11,8 +16,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-@import "mobstyle.css" screen and (max-width: 991px);
 
 .container {
   display: flex;
@@ -24,9 +27,8 @@ section {
   width: 1440px;
   position: relative;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
 }
-
 
 /****** CENTER LINE ***********/
 section object.center-line {
@@ -34,7 +36,6 @@ section object.center-line {
   top: 0%;
   left: 50%;
   z-index: 999;
-  
 }
 
 /****** CENTER LINE ***********/
@@ -42,14 +43,14 @@ section object.center-line {
 /*********** FIRST SECTION ******************/
 #cover {
   height: 620px;
-  background-image: url('assets/img/cover/cover.png')  ;
+  background-image: url('assets/img/cover/cover.png');
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   color: white;
 }
 
- /**** NAVIGATION ****/
+/**** NAVIGATION ****/
 
 header {
   width: 80%;
@@ -63,7 +64,8 @@ header nav li {
   list-style: none;
 }
 
-header .left-nav, header .right-nav {
+header .left-nav,
+header .right-nav {
   display: flex;
   width: 45%;
   height: 20px;
@@ -77,7 +79,8 @@ header .logo {
 }
 
 /*-- NAV POSITION --*/
-.left-nav, .right-nav {
+.left-nav,
+.right-nav {
   padding: 0 2em 0 0;
 }
 
@@ -122,7 +125,6 @@ h1 {
   height: 100%;
   font-family: var(--main-font);
   font-size: 15px;
-  font-weight: var(--main-weight);
 }
 
 #cover h3 {
@@ -135,9 +137,10 @@ h1 {
   width: 80%;
 }
 
-#cover a, a:focus {
+#cover a,
+a:focus {
   color: white;
-  text-transform:  uppercase;
+  text-transform: uppercase;
   font-size: 11px;
   padding: 0 0.5em;
   vertical-align: middle;
@@ -153,7 +156,6 @@ h1 {
   color: black;
   font-family: var(--main-font);
   font-size: 15px;
-  font-weight: var(--main-weight);
 }
 
 /*********** FIRST SECTION ******************/
@@ -162,12 +164,11 @@ h1 {
 #video {
   height: 580px;
   font-family: var(--main-font);
-  font-weight: var(--main-weight);
 }
 
 .top-block {
-  width: 80%;
   height: 100%;
+  padding: 0 2em;
   display: flex;
   flex-direction: column;
   margin-top: -4em;
@@ -185,26 +186,31 @@ section object.center-line {
 
 #video span h2 {
   margin: auto;
-  font-size: 32px;
+  font-size: var(--title-size);
   font-family: var(--second-font);
   text-align: center;
-  padding: 1em;
-
+  margin: var(--title-margin);
 }
 
 /*-- GRID LECTEUR --*/
 
 .grid-container-video {
-  color: #8D8E93;
+  color: #8d8e93;
   height: 100%;
   display: grid;
   align-items: center;
+  justify-content: flex-start;
   grid-template-columns: 0.5fr 1fr 0.5fr;
   grid-template-rows: 33% 33% 33%;
-  grid-template-areas: 'arg_1 video arg_4'
-                       'arg_2 video arg_5'
-                       'arg_3 video arg_6';
-            
+  grid-template-areas:
+    'arg_1 video arg_4'
+    'arg_2 video arg_5'
+    'arg_3 video arg_6';
+}
+
+.argument {
+  font-size: 15px;
+  width: 80%;
 }
 
 .video-lecteur {
@@ -240,10 +246,56 @@ section object.center-line {
 /*********** THIRD SECTION *****************/
 #app {
   height: 612px;
-  background-color: #F5F6F6;  
+  background-color: #f5f6f6;
+  flex-direction: column;
+  align-content: center;
+}
+
+#app h2 {
+  text-align: center;
+  font-family: var(--second-font);
+  font-size: var(--title-size);
+  margin: var(--title-margin);
+}
+
+/*-- APP LIST --*/
+#app ul {
+  display: inline-flex;
+  justify-content: center;
+  width: 1440px;
+  border-bottom: 1px solid #e2e2e5;
+  font-size: 15px;
+  font-family: var(--main-font);
+  color: #6c6d72;
+}
+
+#app ul li {
+  list-style: none;
+  padding: 1em;
+}
+
+#app .app-selection {
+  width: 60%;
+  height: 350px;
+  margin: auto;
+  background-color: white;
   position: relative;
 }
 
+/*-- APP SELECTION --*/
+#app .app-selection img.background {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 50% 100%, 0% 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#app .app-selection img.phone {
+  position: absolute;
+  left: calc(50% - 262px/2 - 276px);
+  bottom: 0;
+}
 
 /*********** THIRD SECTION *****************/
 
@@ -252,7 +304,6 @@ section object.center-line {
   height: 807px;
   font-family: var(--main-font);
   font-size: var(--nav-size);
-  font-weight: var(--main-weight);
 }
 
 .grid-container-blog {
@@ -262,14 +313,34 @@ section object.center-line {
   align-items: center;
 }
 
-#blog .title, #blog h3 {
+#blog button {
+  grid-column: span 4;
+  margin: auto;
+  width: 200px;
+  height: 36px;
+  border: 1px solid #231f10;
+  border-radius: 24px;
+  background-color: white;
+  font-family: var(--main-font);
+  font-size: 12px;
+}
+
+/*-- TITLE BLOCK --*/
+#blog .title,
+#blog h3 {
   grid-column: span 4;
   text-align: center;
 }
 
-#blog button {
-  grid-column: span 4;
-  margin: auto;
+#blog .title h2 {
+  font-family: var(--second-font);
+  font-size: var(--title-size);
+  margin: var(--title-margin);
+}
+
+#blog .title p {
+  font-size: 15px;
+  color: #8d8e93;
 }
 
 /*-- ARTICLE BLOCK --*/
@@ -279,13 +350,35 @@ section object.center-line {
 }
 
 #article figure.article-item {
-  position: relative
+  position: relative;
 }
 
 #article figure.article-item figcaption {
   position: absolute;
-  top: 0;
-  left:0;
+  top: 96px;
+  left: 20px;
+  right: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1em;
+}
+
+#article figure.article-item h4 {
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: #dfb57b;
+}
+
+#article figure.article-item p {
+  font-size: var(--nav-size);
+  font-family: var(--second-font);
+}
+
+#article figure object.center-line {
+  left: calc(50% - 16px / 2);
+  top: -8px;
 }
 
 /*-- COCKTAIL BLOCK --*/
@@ -296,14 +389,18 @@ section object.center-line {
   align-items: center;
 }
 
+#cocktails figure figcaption {
+  width: 100%;
+}
+
 #cocktails figure div.arome {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   font-size: 12px;
   margin: 1em 0;
+  text-align: center;
 }
 
-
-
 /*********** FOURTH SECTION *****************/
+}
