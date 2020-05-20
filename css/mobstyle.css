@@ -23,6 +23,8 @@ header {
 	height: 60px;
 	/* background-color: white; */
 	width: 100%;
+	justify-content: space-around;
+	padding: 1em;
 }
 
 /*-- BURGER MENU --*/
@@ -32,18 +34,43 @@ header .burger {
 
 header .burger div {
 	width: 16px;
-	height: 2.5px;
+	height: 2px;
 	background-color: white;
 	margin: 3px;
 }
 
+/*-- NAVIGATION --*/
 header .left-nav li,
 .right-nav li {
 	display: none;
+	opacity: 0;
+}
+
+header nav.left-nav,
+header nav.right-nav .right-link {
+	display: none;
+}
+
+header nav.right-nav {
+	width: 60%;
+	padding: 0;
+	justify-content: space-around;
+}
+
+header nav.right-nav .right-icon object {
+	width: 18px;
 }
 
 header object.home {
 	display: none;
+}
+
+header div.logo {
+	margin: 0 1em;
+}
+
+header div.logo img {
+	width: 70px;
 }
 
 /**** COVER TEXT ****/
@@ -53,6 +80,10 @@ header object.home {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.cover-text.hidden {
+	opacity: 0;
 }
 
 .title,
