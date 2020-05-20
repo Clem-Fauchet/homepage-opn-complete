@@ -12,6 +12,8 @@
   box-sizing: border-box;
 }
 
+@import "mobstyle.css" screen and (max-width: 991px);
+
 .container {
   display: flex;
   flex-direction: column;
@@ -20,14 +22,27 @@
 
 section {
   width: 1440px;
+  position: relative;
+  display: flex;
+  justify-content: center; 
 }
 
+
+/****** CENTER LINE ***********/
+section object.center-line {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  z-index: 999;
+  
+}
+
+/****** CENTER LINE ***********/
 
 /*********** FIRST SECTION ******************/
 #cover {
   height: 620px;
   background-image: url('assets/img/cover/cover.png')  ;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -66,17 +81,14 @@ header .logo {
   padding: 0 2em 0 0;
 }
 
-.right-nav .right-link, .right-nav .right-icon {
+.right-nav .right-link {
   display: flex;
   justify-content: space-between;
-}
-
-.right-link {
   width: 50%;
 }
 
-.right-icon {
-  width: 30%;
+object.top-icon {
+  margin: 0 1em;
 }
 
 /**** COVER TEXT ****/
@@ -102,7 +114,7 @@ h1 {
 
 /*-- DESCR --*/
 
-.description {
+#cover .description {
   grid-column: 3/4;
   display: flex;
   flex-direction: column;
@@ -113,17 +125,17 @@ h1 {
   font-weight: var(--main-weight);
 }
 
-h3 {
+#cover h3 {
   font-family: var(--second-font);
   font-size: 24px;
   font-weight: 400;
 }
 
-p {
+#cover p {
   width: 80%;
 }
 
-a, a:focus {
+#cover a, a:focus {
   color: white;
   text-transform:  uppercase;
   font-size: 11px;
@@ -132,7 +144,7 @@ a, a:focus {
   letter-spacing: 2px;
 }
 
-button {
+#cover button {
   height: 54px;
   width: 280px;
   border: none;
@@ -149,8 +161,6 @@ button {
 /*********** SECOND SECTION *****************/
 #video {
   height: 580px;
-  display: flex;
-  justify-content: center; 
   font-family: var(--main-font);
   font-weight: var(--main-weight);
 }
@@ -162,13 +172,18 @@ button {
   flex-direction: column;
   margin-top: -4em;
   background-color: white;
+  position: relative;
 }
 
-span {
+section object.center-line {
+  top: -12px;
+}
+
+#video span {
   width: 100%;
 }
 
-span h2 {
+#video span h2 {
   margin: auto;
   font-size: 32px;
   font-family: var(--second-font);
@@ -179,7 +194,7 @@ span h2 {
 
 /*-- GRID LECTEUR --*/
 
-.grid-container {
+.grid-container-video {
   color: #8D8E93;
   height: 100%;
   display: grid;
@@ -219,3 +234,76 @@ span h2 {
 .arg_6 {
   grid-area: arg_6;
 }
+
+/*********** SECOND SECTION *****************/
+
+/*********** THIRD SECTION *****************/
+#app {
+  height: 612px;
+  background-color: #F5F6F6;  
+  position: relative;
+}
+
+
+/*********** THIRD SECTION *****************/
+
+/*********** FOURTH SECTION *****************/
+#blog {
+  height: 807px;
+  font-family: var(--main-font);
+  font-size: var(--nav-size);
+  font-weight: var(--main-weight);
+}
+
+.grid-container-blog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 2fr 1fr 1fr 2fr 1fr;
+  align-items: center;
+}
+
+#blog .title, #blog h3 {
+  grid-column: span 4;
+  text-align: center;
+}
+
+#blog button {
+  grid-column: span 4;
+  margin: auto;
+}
+
+/*-- ARTICLE BLOCK --*/
+#article {
+  width: 100%;
+  height: 100%;
+}
+
+#article figure.article-item {
+  position: relative
+}
+
+#article figure.article-item figcaption {
+  position: absolute;
+  top: 0;
+  left:0;
+}
+
+/*-- COCKTAIL BLOCK --*/
+#cocktails figure.cocktails-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cocktails figure div.arome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin: 1em 0;
+}
+
+
+
+/*********** FOURTH SECTION *****************/
