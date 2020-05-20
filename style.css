@@ -40,6 +40,57 @@ section object.center-line {
 
 /****** CENTER LINE ***********/
 
+/****** STICKY BAR ******/
+#sticky-bar {
+  position: fixed;
+  height: 60px;
+  z-index: 99999999;
+  background-color: white;
+  box-shadow: 0px 3px 14px rgba(0, 0, 0, 0.07);
+  display: none;
+}
+
+.bar {
+  display: inline-flex;
+  width: 70%;
+  align-items: flex-end;
+  margin: 0.5em auto;
+}
+
+.bar img {
+  padding: 0 1em;
+}
+
+.bar span {
+  padding: 0 1em;
+}
+
+.bar span h4 {
+  font-size: 18px;
+  font-family: var(--second-font);
+}
+
+.bar span p {
+  color: #8D8E93;
+  font-size: 12px;
+  font-family: var(--main-font);
+  letter-spacing: 0.03em;
+}
+
+.bar button {
+  height: 36px;
+  width: 220px;
+  line-height: 36px;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: white;
+  font-family: var(--main-font);
+  background-color: #DFB57B;
+  border-radius: 24px;
+  border: none;
+}
+/****** STICKY BAR ******/
+
 /*********** FIRST SECTION ******************/
 #cover {
   height: 620px;
@@ -49,6 +100,7 @@ section object.center-line {
   justify-content: space-between;
   color: white;
 }
+
 
 /**** NAVIGATION ****/
 
@@ -294,7 +346,23 @@ section object.center-line {
 #app .app-selection img.phone {
   position: absolute;
   left: calc(50% - 262px/2 - 276px);
-  bottom: 0;
+  bottom: -20px;
+  z-index:10;
+}
+
+#app .app-selection #previous, #next {
+  position: absolute;
+  z-index: 50;
+  top: calc(50% - 52px/2); 
+}
+
+#app .app-selection #previous {
+  left: calc(0% - 52px/2); 
+}
+
+#app .app-selection #next {
+  right: calc(0% - 52px/2);
+  transform: rotate(180deg);
 }
 
 /*********** THIRD SECTION *****************/
