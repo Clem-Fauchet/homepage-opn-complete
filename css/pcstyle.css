@@ -399,6 +399,7 @@ svg.hidden {
 	justify-content: space-around;
 	align-items: center;
 	width: 80%;
+	margin-bottom: 2em;
 }
 
 #blog .blog-separation {

@@ -61,7 +61,7 @@ const navCarousel = () => {
 			if (clickedDotNum == activeDotNum) {
 				return
 			} else {
-				let pixelsToMove = 100
+				let pixelsToMove = -100
 				dots[activeDotNum].classList.remove('active')
 				dots[clickedDotNum].classList.add('active')
 				slider.style.transform =
