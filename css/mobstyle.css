@@ -63,6 +63,7 @@ header div.logo {
 header div.logo img {
 	width: 70px;
 }
+
 /****** HEADER *****/
 
 /*********** FIRST SECTION ******************/
@@ -224,6 +225,7 @@ section object.center-line {
 #app {
 	height: auto;
 }
+
 #app #next,
 #app #previous {
 	display: none;

@@ -357,7 +357,7 @@ svg#lecteur .circle {
 	justify-content: space-around;
 }
 
-#app  h2 {
+#app h2 {
 	text-align: center;
 	font-family: var(--second-font);
 	font-size: var(--title-size);
@@ -384,7 +384,8 @@ svg#lecteur .circle {
 	cursor: pointer;
 }
 
-.title-selection h4:focus, .title-selection h4:hover  {
+.title-selection h4:focus,
+.title-selection h4:hover {
 	border-bottom: 3px solid #E4C291;
 	display: inline;
 }
