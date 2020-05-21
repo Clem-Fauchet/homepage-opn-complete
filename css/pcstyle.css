@@ -353,38 +353,55 @@ svg#lecteur .circle {
 	height: 612px;
 	background-color: #f5f6f6;
 	flex-direction: column;
-	align-content: center;
+	align-items: center;
+	justify-content: space-around;
 }
 
-#app h2 {
+#app  h2 {
 	text-align: center;
 	font-family: var(--second-font);
 	font-size: var(--title-size);
-	margin: var(--title-margin);
 }
 
-/*-- APP LIST --*/
-#app ul {
-	display: inline-flex;
-	justify-content: center;
-	width: 1440px;
-	border-bottom: 1px solid #e2e2e5;
+#app .container-selection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+
+}
+
+#app .container-selection .title-selection {
+	width: 60%;
 	font-size: 15px;
 	font-family: var(--main-font);
 	color: #6c6d72;
+	margin: 0 0 4em;
 }
 
-#app ul li {
-	list-style: none;
-	padding: 1em;
+.title-selection h4 {
+	cursor: pointer;
 }
 
-#app .app-selection {
-	width: 60%;
+.title-selection h4:focus, .title-selection h4:hover  {
+	border-bottom: 3px solid #E4C291;
+	display: inline;
+}
+
+#app .container-selection .app-selection {
+	border-top: 1px solid #e2e2e5;
+	width: 100%;
 	height: 350px;
+}
+
+
+#app .app-selection .description-selection {
+	position: relative;
+	width: 60%;
+	height: 100%;
 	margin: auto;
 	background-color: white;
-	position: relative;
 }
 
 /*-- APP SELECTION --*/
@@ -398,7 +415,7 @@ svg#lecteur .circle {
 
 #app .app-selection img.phone {
 	position: absolute;
-	left: calc(50% - 262px / 2 - 276px);
+	/* left: calc(50% - 262px / 2 - 276px); */
 	bottom: -20px;
 	z-index: 10;
 }

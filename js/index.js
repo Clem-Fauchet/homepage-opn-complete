@@ -20,15 +20,15 @@ Cocktail()
 Cocktail()
 
 /*****PC NAVIGATION ANIMATION ****/
-const attributeFocus = () => {
+const attributeFocusNav = () => {
 	const linkFocus = document.getElementById('current')
 	linkFocus.focus()
 	linkFocus.style.outline = 'none'
 }
 
-/***** FUNCTION MOBILE CALL ******/
+/***** FUNCTION PC CALL ******/
 const appPC = () => {
-	attributeFocus()
+	attributeFocusNav()
 }
 
 appPC()
@@ -63,25 +63,29 @@ const navMobile = () => {
 /*****MOBILE CAROUSEL ANIMATION ****/
 
 const navCarousel = () => {
-	const slider = document.querySelectorAll('.argument')
+	const slider = document.querySelectorAll('.grid-container-video')
 	const dots = document.querySelectorAll('.btn')
 
-	let activeDotNum = 0
+	let activeDotNum = 0 //dot avec class active
 
 	dots.forEach((dot, index) => {
-		dot.setAttribute('data-num', index)
+		let dataDot = dot.setAttribute('data-num', index) //error undefined
 
 		dot.addEventListener('click', (e) => {
 			let clickedDotNum = e.target.dataset.num
-
 			if (clickedDotNum == activeDotNum) {
+				//si active dot do nothing
 				return
 			} else {
-				let pixelsToMove = -100
 				dots[activeDotNum].classList.remove('active')
 				dots[clickedDotNum].classList.add('active')
-				slider.style.transform =
-					'translateX(' + pixelsToMove + ' % * ' + index + ')' /// PROBLEME ITEM SVG
+
+				console.log(index)
+				console.log(dataDot)
+
+				// let pixelsToMove = -100 //translate gauche à droite
+				// slider.style.transform =
+				// 	'translateX(' + pixelsToMove + ' % * ' + index + ')'
 			}
 		})
 	})

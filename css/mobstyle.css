@@ -1,6 +1,7 @@
 :root {
 	--main-size: 15px;
 	--title-size: 24px;
+	--title-margin: 1.2em 0 1em;
 }
 
 section {
@@ -197,18 +198,75 @@ section object.center-line {
 	text-align: center;
 }
 
-.grid-container-video .btn {
-	height: 8px;
-	width: 8px;
+/*-- DOT NAVIGATION --*/
+.dot-nav-mobile .btn {
+	height: 12px;
+	width: 12px;
 	margin: 0 0.25em;
+	background-color: #e2e2e5;
+	outline: none;
+	border: none;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-o-border-radius: 6px;
 }
-svg.btn circle {
-	fill: #e2e2e5;
+
+.dot-nav-mobile .btn svg.dot-icon {
+	height: 10px;
+	width: 10px;
 }
 
 /*********** SECOND SECTION ******************/
 
 /*********** THIRD SECTION ******************/
+#app {
+	height: auto;
+}
+#app #next,
+#app #previous {
+	display: none;
+}
+
+#app h2 {
+	width: 90%;
+	margin: var(--title-margin);
+}
+
+#app .container-selection {
+	width: 90%;
+	background-color: white;
+}
+
+#app .container-selection .title-selection {
+	width: 100%;
+	font-size: 15px;
+	color: #cba36c;
+	margin: 1em 0 2em;
+	padding: 0 1em;
+}
+
+#app .app-selection .description-selection {
+	position: relative;
+	width: 100%;
+	height: 253px;
+	overflow: hidden;
+}
+
+#app .app-selection img.background {
+	-webkit-clip-path: none;
+	clip-path: none;
+	width: 100%;
+	position: static;
+}
+
+#app .app-selection img.phone {
+	position: absolute;
+	left: 25%;
+	z-index: 10;
+	width: 50%;
+}
 
 /*********** THIRD SECTION ******************/
 
