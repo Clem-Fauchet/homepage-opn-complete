@@ -315,6 +315,37 @@ svg.hidden {
 	display: none;
 }
 
+/*--SVG PLAYER --*/
+.video-lecteur {
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.video-lecteur button.btn-lecteur {
+	width: 45px;
+	height: 45px;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 35px);
+}
+
+svg#lecteur .arrow {
+	fill: white;
+}
+
+svg#lecteur .circle {
+	stroke: white;
+	stroke-width: 4;
+	stroke-dashoffset: 204;
+	stroke-dasharray: 204;
+
+}
+
 /*********** SECOND SECTION *****************/
 
 /*********** THIRD SECTION *****************/
@@ -509,3 +540,4 @@ svg.hidden {
 }
 
 /*********** FOURTH SECTION *****************/
+}
