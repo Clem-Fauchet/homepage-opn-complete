@@ -19,6 +19,22 @@ Cocktail()
 Cocktail()
 Cocktail()
 
+/*****PC NAVIGATION ANIMATION ****/
+const attributeFocus = () => {
+	const linkFocus = document.getElementById('current')
+	linkFocus.focus()
+	linkFocus.style.outline = 'none'
+}
+
+/***** FUNCTION MOBILE CALL ******/
+const appPC = () => {
+	attributeFocus()
+}
+
+appPC()
+
+/*****************************************************************/
+
 /*****MOBILE NAVIGATION ANIMATION ****/
 
 const navMobile = () => {
@@ -71,7 +87,7 @@ const navCarousel = () => {
 	})
 }
 
-/***** FUNCTION CALL ******/
+/***** FUNCTION MOBILE CALL ******/
 const app = () => {
 	navMobile()
 	navCarousel()

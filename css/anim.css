@@ -5,6 +5,61 @@
 	--nav-size: 16px;
 }
 
+/************* PC ANIMATION/HOVER ****************/
+
+/*-- NAVIGATION --*/
+header nav li a {
+	position: relative;
+	padding-bottom: 0.5em;
+}
+
+header nav li a::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: white;
+	transform: scale3d(0, 1, 1);
+	transition: transform 0.2s ease;
+}
+
+header nav li a:hover::before,
+header nav li a:focus::before {
+	transform: scale3d(1, 1, 1);
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.3s;
+}
+
+#cover .cover-text svg.polygon-video {
+	fill: white;
+	transition: transform 0.3s ease;
+}
+
+#cover .cover-text span {
+	cursor: pointer;
+}
+
+#cover .cover-text span:hover svg.polygon-video {
+	transform: translate(-3px, -3px) scale(1.1);
+	fill: #cba36c;
+	width: 15px;
+	height: 15px;
+	transition: transform 0.3s ease;
+}
+
+#cover .cover-text span:hover a {
+	color: #cba36c;
+}
+
+#cover .cover-text a:hover {
+	color: #cba36c;
+	transform: scale(1.03);
+	transition: transform 0.3s ease;
+}
+/************* PC ANIMATION/HOVER ****************/
+
 /************* MOBILE ANIMATION ****************/
 
 @media screen and (max-width: 991px) {
