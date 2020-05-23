@@ -343,7 +343,6 @@ svg#lecteur .circle {
 	stroke-width: 4;
 	stroke-dashoffset: 204;
 	stroke-dasharray: 204;
-
 }
 
 /*********** SECOND SECTION *****************/
@@ -369,7 +368,6 @@ svg#lecteur .circle {
 	align-items: center;
 	width: 100%;
 	justify-content: space-between;
-
 }
 
 #app .container-selection .title-selection {
@@ -386,7 +384,7 @@ svg#lecteur .circle {
 
 .title-selection h4:focus,
 .title-selection h4:hover {
-	border-bottom: 3px solid #E4C291;
+	border-bottom: 3px solid #e4c291;
 	display: inline;
 }
 
@@ -395,7 +393,6 @@ svg#lecteur .circle {
 	width: 100%;
 	height: 350px;
 }
-
 
 #app .app-selection .description-selection {
 	position: relative;
@@ -551,6 +548,15 @@ svg#lecteur .circle {
 	align-items: center;
 }
 
+#cocktails .cocktails-item .img-cocktail {
+	width: 115px;
+	height: 115px;
+}
+
+#cocktails .cocktails-item:first-child .img-cocktail {
+	background-image: url('../assets/img/blog/cocktail-1.png') !important;
+}
+
 #cocktails figure figcaption {
 	width: 150%;
 }
@@ -565,4 +571,3 @@ svg#lecteur .circle {
 }
 
 /*********** FOURTH SECTION *****************/
-}

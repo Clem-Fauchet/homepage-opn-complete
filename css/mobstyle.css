@@ -12,8 +12,8 @@ section {
 
 header {
 	height: 60px;
+	width: 375px;
 	/* background-color: white; */
-	width: 100%;
 	justify-content: space-around;
 	padding: 1em;
 }
@@ -331,6 +331,10 @@ section object.center-line {
 
 #cocktails figure.cocktails-item {
 	width: 45%;
+}
+
+#cocktails .cocktails-item:first-child .img-cocktail {
+	background-image: url('../assets/img/blog/cocktail-5.png') !important;
 }
 
 #cocktails figure figcaption {

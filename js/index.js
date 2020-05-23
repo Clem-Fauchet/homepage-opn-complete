@@ -8,16 +8,20 @@ Article()
 Article()
 Article()
 
-const Cocktail = () => {
+const Cocktail = (urlImage) => {
+	let imageCocktail = document.querySelector('.img-cocktail')
+	imageCocktail.style.backgroundImage = 'url(' + urlImage + ')'
+
 	const cloneCocktail = document
 		.querySelector('.cocktails-item')
 		.cloneNode(true)
 	document.getElementById('cocktails').appendChild(cloneCocktail)
 }
 
-Cocktail()
-Cocktail()
-Cocktail()
+Cocktail('../assets/img/blog/cocktail-2.png')
+Cocktail('../assets/img/blog/cocktail-3.png')
+Cocktail('../assets/img/blog/cocktail-4.png')
+// Cocktail('../assets/img/blog/cocktail-1.png')
 
 /*****PC NAVIGATION ANIMATION ****/
 const attributeFocusNav = () => {
