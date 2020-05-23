@@ -10,7 +10,7 @@ Article()
 
 const Cocktail = (urlImage) => {
 	let imageCocktail = document.querySelector('.img-cocktail')
-	imageCocktail.style.backgroundImage = 'url(' + urlImage + ')'
+	imageCocktail.style.backgroundImage = `url(${urlImage})`
 
 	const cloneCocktail = document
 		.querySelector('.cocktails-item')
@@ -21,7 +21,6 @@ const Cocktail = (urlImage) => {
 Cocktail('../assets/img/blog/cocktail-2.png')
 Cocktail('../assets/img/blog/cocktail-3.png')
 Cocktail('../assets/img/blog/cocktail-4.png')
-// Cocktail('../assets/img/blog/cocktail-1.png')
 
 /*****PC NAVIGATION ANIMATION ****/
 const attributeFocusNav = () => {
@@ -67,38 +66,75 @@ const navMobile = () => {
 /*****MOBILE CAROUSEL ANIMATION ****/
 
 const navCarousel = () => {
-	const slider = document.querySelectorAll('.grid-container-video')
+	const argument = document.querySelectorAll('.argument')
 	const dots = document.querySelectorAll('.btn')
 
-	let activeDotNum = 0 //dot avec class active
+	/* ARGUMENT CIBLE */
+	const arg1 = document.querySelector('.arg_1')
+	const arg2 = document.querySelector('.arg_2')
+	const arg3 = document.querySelector('.arg_3')
+	const arg4 = document.querySelector('.arg_4')
+	const arg5 = document.querySelector('.arg_5')
+	const arg6 = document.querySelector('.arg_6')
 
-	dots.forEach((dot, index) => {
-		let dataDot = dot.setAttribute('data-num', index) //error undefined
+	//argument selection
+	argument.forEach((arg, indexArg) => {
+		arg.setAttribute('data-numarg', indexArg)
+		const argData = arg.getAttribute('dataset')
 
-		dot.addEventListener('click', (e) => {
-			let clickedDotNum = e.target.dataset.num
-			if (clickedDotNum == activeDotNum) {
-				//si active dot do nothing
-				return
-			} else {
-				dots[activeDotNum].classList.remove('active')
-				dots[clickedDotNum].classList.add('active')
+		//position de chaque argument
+		let initialPosition = 100
+		arg.style.transform = `translateX(calc(${initialPosition}% * ${indexArg}))`
 
-				console.log(index)
-				console.log(dataDot)
+		//Argument position string (//brut number)
+		let argPositionValue = arg.style
+			.getPropertyValue('transform')
+			.match(/(-?[0-9\.]+)/g)
+			.toString()
 
-				// let pixelsToMove = -100 //translate gauche à droite
-				// slider.style.transform =
-				// 	'translateX(' + pixelsToMove + ' % * ' + index + ')'
-			}
+		//dot selection
+		let activeDotNum = 0 //dot numero 1 class active index 0
+
+		dots.forEach((dot, indexDot) => {
+			dot.setAttribute('data-numdot', indexDot)
+
+			dot.addEventListener('click', (e) => {
+				let clickedDotNum = e.target.dataset.numdot
+
+				if (clickedDotNum == activeDotNum) {
+					//si active dot do nothing
+					return
+				} else if (clickedDotNum >= activeDotNum) {
+					//change les dots actifs
+					dots[activeDotNum].classList.remove('active')
+					dots[clickedDotNum].classList.add('active')
+					activeDotNum = clickedDotNum
+
+					//change position
+					let newArgPosition = (arg.style.transform = `translateX(calc(${argPositionValue}% - (${initialPosition}% * ${clickedDotNum})))`)
+				} else {
+					//change les dots actifs
+					dots[activeDotNum].classList.remove('active')
+					dots[clickedDotNum].classList.add('active')
+					activeDotNum = clickedDotNum
+
+					//change position
+					let newArgPosition = (arg.style.transform = `translateX(calc(${argPositionValue}% + (-${initialPosition}% * ${clickedDotNum})))`)
+				}
+			})
 		})
 	})
 }
 
 /***** FUNCTION MOBILE CALL ******/
 const app = () => {
+	let viewportWidth = window.innerWidth || document.documentElement.clientWidth
+
 	navMobile()
-	navCarousel()
+
+	if (viewportWidth < 991) {
+		navCarousel()
+	}
 }
 
 app()

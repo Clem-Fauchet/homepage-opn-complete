@@ -161,7 +161,6 @@ section object.center-line {
 }
 
 /*-- CAROUSEL ARGUMENT --*/
-
 .arg_1,
 .arg_2,
 .arg_3,
@@ -170,26 +169,12 @@ section object.center-line {
 .arg_6 {
 	grid-column: 1/3;
 	grid-row: 2/3;
-}
-
-.arg_2 {
-	transform: translateX(100%);
-}
-
-.arg_3 {
-	transform: translateX(200%);
-}
-
-.arg_4 {
-	transform: translateX(300%);
-}
-
-.arg_5 {
-	transform: translateX(400%);
-}
-
-.arg_6 {
-	transform: translateX(500%);
+	margin: 0 1em;
+	transition: transform 0.5s ease-in-out;
+	-webkit-transition: transform 0.5s ease-in-out;
+	-moz-transition: transform 0.5s ease-in-out;
+	-ms-transition: transform 0.5s ease-in-out;
+	-o-transition: transform 0.5s ease-in-out;
 }
 
 .dot-nav-mobile {
