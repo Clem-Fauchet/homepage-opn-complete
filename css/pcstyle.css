@@ -508,6 +508,13 @@ svg#lecteur .circle {
 	position: relative;
 }
 
+#article .article-item .img-blog {
+	background-image: url('../assets/img/blog/blog.png');
+	height: 151px;
+	width: 260px;
+	background-size: cover;
+}
+
 #article figure.article-item figcaption {
 	position: absolute;
 	top: 96px;

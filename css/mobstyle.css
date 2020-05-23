@@ -300,6 +300,11 @@ section object.center-line {
 	flex-grow: 1.4;
 }
 
+#article .article-item .img-blog {
+	background-image: url('../assets/img/blog/blogmobile.png');
+	width: 335px;
+}
+
 #article figure:nth-last-child(1) {
 	display: none;
 }
@@ -310,7 +315,8 @@ section object.center-line {
 }
 
 #article figure.article-item figcaption {
-	top: calc(232px - 69px);
+	bottom: 0px;
+	top: auto;
 }
 
 #article figure object.center-line {
