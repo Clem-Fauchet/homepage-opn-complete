@@ -65,17 +65,10 @@ const navMobile = () => {
 
 /*****MOBILE CAROUSEL ANIMATION ****/
 
-const navCarousel = () => {
+//BLOG ANIMATION
+const blogCarousel = () => {
 	const argument = document.querySelectorAll('.argument')
 	const dots = document.querySelectorAll('.btn')
-
-	/* ARGUMENT CIBLE */
-	const arg1 = document.querySelector('.arg_1')
-	const arg2 = document.querySelector('.arg_2')
-	const arg3 = document.querySelector('.arg_3')
-	const arg4 = document.querySelector('.arg_4')
-	const arg5 = document.querySelector('.arg_5')
-	const arg6 = document.querySelector('.arg_6')
 
 	//argument selection
 	argument.forEach((arg, indexArg) => {
@@ -126,14 +119,38 @@ const navCarousel = () => {
 	})
 }
 
+//APP ANIMATION
+
+const appOpen = () => {
+	const iconPlus = document.querySelectorAll('.icon-plus')
+	const appSelection = document.querySelectorAll('.app-selection')
+
+	iconPlus.forEach((icon, indexIcon) => {
+		appSelection.forEach((selection, indexSelection) => {
+			selection.setAttribute('data-numselection', indexSelection)
+		})
+
+		icon.setAttribute('data-numicon', indexIcon)
+
+		icon.addEventListener('click', (e) => {
+			let clickedIcon = e.target.dataset.numicon
+
+			appSelection[clickedIcon].classList.toggle('open')
+
+			iconPlus[clickedIcon].classList.toggle('open')
+		})
+	})
+}
+
 /***** FUNCTION MOBILE CALL ******/
 const app = () => {
-	let viewportWidth = window.innerWidth || document.documentElement.clientWidth
+	let viewportWidth = window.innerWidth
 
 	navMobile()
 
-	if (viewportWidth < 991) {
-		navCarousel()
+	if (viewportWidth <= 991) {
+		blogCarousel()
+		appOpen()
 	}
 }
 

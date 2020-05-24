@@ -370,6 +370,10 @@ svg#lecteur .circle {
 	justify-content: space-between;
 }
 
+#app .container-selection .app-selection {
+	margin-bottom: 1em;
+}
+
 #app .container-selection .title-selection {
 	width: 60%;
 	font-size: 15px;
@@ -386,6 +390,10 @@ svg#lecteur .circle {
 .title-selection h4:hover {
 	border-bottom: 3px solid #e4c291;
 	display: inline;
+}
+
+.title-selection span.icon-plus {
+	display: none;
 }
 
 #app .container-selection .app-selection {
@@ -409,6 +417,7 @@ svg#lecteur .circle {
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 3;
 }
 
 #app .app-selection img.phone {
@@ -416,6 +425,32 @@ svg#lecteur .circle {
 	/* left: calc(50% - 262px / 2 - 276px); */
 	bottom: -20px;
 	z-index: 10;
+}
+
+/*-- DESCRIPTION --*/
+.app-selection .description {
+	float: right;
+	width: 60%;
+	height: 80%;
+	padding: 2em 0.5em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.app-selection .description h5 {
+	font-family: var(--second-font);
+	font-size: var(--nav-size);
+	z-index: 5;
+	text-transform: uppercase;
+}
+
+.app-selection .description p {
+	color: #6c6d72;
+	font-family: var(--main-font);
+	font-size: 15px;
+	z-index: 5;
+	width: 90%;
 }
 
 #app .app-selection #previous,

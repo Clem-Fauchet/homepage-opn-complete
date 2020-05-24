@@ -108,11 +108,11 @@ header div.logo img {
 	width: 100%;
 }
 
-.description h3 {
+#cover .description h3 {
 	font-size: 18px;
 }
 
-.description p,
+#cover .description p,
 .description span {
 	display: none;
 }
@@ -209,6 +209,7 @@ section object.center-line {
 /*********** THIRD SECTION ******************/
 #app {
 	height: auto;
+	padding-bottom: 1em;
 }
 
 #app #next,
@@ -232,13 +233,74 @@ section object.center-line {
 	color: #cba36c;
 	margin: 1em 0 2em;
 	padding: 0 1em;
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+/*-- ICON PLUS --*/
+.title-selection span.icon-plus {
+	display: block;
+	position: relative;
+	width: 22px;
+	height: 22px;
+}
+
+span.icon-plus div {
+	background: #8d8e93;
+	position: absolute;
+}
+
+span.icon-plus .bar-horizontal {
+	width: 11px;
+	height: 2px;
+	top: calc(50% - 1px);
+	left: calc(50% - (11px / 2));
+	opacity: 1;
+	transform: rotate(0deg);
+	transition: opacity 0.5s ease, transform 0.3 ease;
+	-webkit-transition: opacity 0.5s ease, transform 0.3 ease;
+	-moz-transition: opacity 0.5s ease, transform 0.3 ease;
+	-ms-transition: opacity 0.5s ease, transform 0.3 ease;
+	-o-transition: opacity 0.5s ease, transform 0.3 ease;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+}
+
+span.icon-plus .bar-vertical {
+	width: 2px;
+	height: 11px;
+	top: calc(50% - (11px / 2));
+	left: calc(50% - 1px);
+	transform: rotate(0deg);
+	transition: transform 0.3s ease;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	-webkit-transition: transform 0.3s ease;
+	-moz-transition: transform 0.3s ease;
+	-ms-transition: transform 0.3s ease;
+	-o-transition: transform 0.3s ease;
+}
+
+/*-- ICON PLUS --*/
+#app .container-selection .app-selection {
+	height: 0;
+	overflow-y: hidden;
+	border-top: none;
+	margin-bottom: 0em;
+	transition: height 0.5s ease-in-out;
+	-webkit-transition: height 0.5s ease-in-out;
+	-moz-transition: height 0.5s ease-in-out;
+	-ms-transition: height 0.5s ease-in-out;
+	-o-transition: height 0.5s ease-in-out;
 }
 
 #app .app-selection .description-selection {
 	position: relative;
 	width: 100%;
-	height: 253px;
-	overflow: hidden;
 }
 
 #app .app-selection img.background {
@@ -251,8 +313,25 @@ section object.center-line {
 #app .app-selection img.phone {
 	position: absolute;
 	left: 25%;
+	top: 28.5px;
 	z-index: 10;
 	width: 50%;
+}
+
+/*-- DESCRIPTION --*/
+.app-selection .description {
+	float: none;
+	width: 90%;
+	padding: 1.5em;
+	justify-content: flex-start;
+}
+
+.app-selection .description h5 {
+	margin-bottom: 1em;
+}
+
+.app-selection .description p {
+	width: 100%;
 }
 
 /*********** THIRD SECTION ******************/
