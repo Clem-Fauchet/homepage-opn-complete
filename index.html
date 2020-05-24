@@ -14,6 +14,24 @@
 <body>
   <div class='container'>
 
+    <!-- SYMBOL UTILISE POUR NAV ARROW APP SECTION -->
+    <svg class='hidden'>
+
+      <defs>
+        <symbol id='arrow-nav'>
+          <circle cx="26" cy="25" r="18" fill="#231F10" />
+          <path
+            d="M24.3327 19.0001C24.4228 18.9985 24.5098 19.0329 24.5746 19.0956L25.2059 19.7072C25.3406 19.8377 25.3442 20.0527 25.2138 20.1876L21.3103 24.2254H32.4106C32.598 24.2254 32.75 24.3775 32.75 24.5651V25.4349C32.75 25.6225 32.598 25.7746 32.4106 25.7746H21.2568L25.2122 29.8108C25.2755 29.8754 25.3105 29.9626 25.3093 30.0531C25.3081 30.1436 25.2709 30.2299 25.2059 30.2928L24.5746 30.9044C24.4404 31.0343 24.2266 31.0315 24.096 30.898L18.5967 25.2783C18.4678 25.1463 18.4678 24.9353 18.5967 24.8033L18.8939 24.4991L24.0942 19.1039C24.1568 19.0389 24.2426 19.0016 24.3327 19.0001Z"
+            fill="white" />
+        </symbol>
+        </defs>
+
+
+
+    </svg>
+    <!-- SYMBOL UTILISE POUR NAV ARROW APP SECTION -->
+
+
     <!-- STICKY BAR HIDDEN -->
     <section id='sticky-bar'>
       <div class='bar'>
@@ -208,6 +226,20 @@
       <object class='center-line' type="image/svg+xml" data="assets/icons/line.svg"></object>
       <!-- CENTER LINE -->
 
+      <!-- BUTTON NEXT/PREVIOUS -->
+      <button class='btn-arrow' id='previous'>
+        <svg class='arrow'>
+          <use href='#arrow-nav'></use>
+        </svg>
+      </button>
+
+      <button class='btn-arrow' id='next'>
+        <svg class='arrow'>
+          <use href='#arrow-nav'></use>
+        </svg>
+      </button>
+      <!-- BUTTON NEXT/PREVIOUS -->
+
 
       <h2>Vos cocktails favoris à réaliser à la maison grâce à l'app Cocktails/Opn !</h2>
 
@@ -229,14 +261,14 @@
             <img class='background' src='assets/img/app/background.png' alt='background' />
             <img class='phone' src='assets/img/app/phone.png' alt='phone' />
 
-            <!-- BUTTON NEXT & PREVIOUS -->
-            <object id='previous' type="image/svg+xml" data="assets/icons/video/button.svg"></object>
-            <object id='next' type="image/svg+xml" data="assets/icons/video/button.svg"></object>
-
             <div class='description'>
-              <h5>Trouvez les cocktails réalisables <br/> avec les ingrédients disponibles chez vous</h5>
+              <h5>Trouvez les cocktails réalisables <br /> avec les ingrédients disponibles chez vous</h5>
 
-              <p>Nous nous sommes tous déjà retrouvés à la maison avec l’envie de prendre un verre sans la motivation pour faire des courses. Avec la fonctionnalité « Frigo », il suffit de rentrer les ingrédients disponibles chez vous et l’application vous trouvera tous les cocktails réalisables sans sortir de chez vous ! Pour aller plus loin, l’app vous recommandera aussi les ingrédients qui vous manquent pour débloquer toujours plus de recettes.</p>
+              <p>Nous nous sommes tous déjà retrouvés à la maison avec l’envie de prendre un verre sans la motivation
+                pour faire des courses. Avec la fonctionnalité « Frigo », il suffit de rentrer les ingrédients
+                disponibles chez vous et l’application vous trouvera tous les cocktails réalisables sans sortir de chez
+                vous ! Pour aller plus loin, l’app vous recommandera aussi les ingrédients qui vous manquent pour
+                débloquer toujours plus de recettes.</p>
             </div>
 
           </div>
@@ -246,7 +278,101 @@
       </div>
       <!-- SELECTION 1 -->
 
+      <!-- SELECTION 2 -->
+      <div class='container-selection selection_2'>
 
+        <div class='title-selection'>
+          <h4> Des recommandations personnalisées</h4>
+          <span class='icon-plus'>
+            <div class='bar-horizontal'></div>
+            <div class='bar-vertical'></div>
+          </span>
+        </div>
+
+        <!-- BLOC APP SELECTION -->
+
+        <div class='app-selection'>
+          <div class='description-selection'>
+            <img class='background' src='assets/img/app/background.png' alt='background' />
+            <img class='phone' src='assets/img/app/phone.png' alt='phone' />
+
+
+            <div class='description'>
+              <h5>Titre descriptif</h5>
+
+              <p>Paragraphe descriptif</p>
+            </div>
+
+          </div>
+
+          <!-- BLOC APP SELECTION -->
+        </div>
+      </div>
+      <!-- SELECTION 2 -->
+
+      <!-- SELECTION 3 -->
+      <div class='container-selection selection_3'>
+
+        <div class='title-selection'>
+          <h4>+ 300 recettes exclusives</h4>
+          <span class='icon-plus'>
+            <div class='bar-horizontal'></div>
+            <div class='bar-vertical'></div>
+          </span>
+        </div>
+
+        <!-- BLOC APP SELECTION -->
+
+        <div class='app-selection'>
+          <div class='description-selection'>
+            <img class='background' src='assets/img/app/background.png' alt='background' />
+            <img class='phone' src='assets/img/app/phone.png' alt='phone' />
+
+
+            <div class='description'>
+              <h5>Titre descriptif</h5>
+
+              <p>Paragraphe descriptif</p>
+            </div>
+
+          </div>
+
+          <!-- BLOC APP SELECTION -->
+        </div>
+      </div>
+      <!-- SELECTION 3 -->
+
+      <!-- SELECTION 4 -->
+      <div class='container-selection selection_4'>
+
+        <div class='title-selection'>
+          <h4>Des recettes pas à pas</h4>
+          <span class='icon-plus'>
+            <div class='bar-horizontal'></div>
+            <div class='bar-vertical'></div>
+          </span>
+        </div>
+
+        <!-- BLOC APP SELECTION -->
+
+        <div class='app-selection'>
+          <div class='description-selection'>
+            <img class='background' src='assets/img/app/background.png' alt='background' />
+            <img class='phone' src='assets/img/app/phone.png' alt='phone' />
+
+
+            <div class='description'>
+              <h5>Titre descriptif</h5>
+
+              <p>Paragraphe descriptif</p>
+            </div>
+
+          </div>
+
+          <!-- BLOC APP SELECTION -->
+        </div>
+      </div>
+      <!-- SELECTION 4 -->
 
     </section>
 

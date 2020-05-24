@@ -124,12 +124,9 @@ const blogCarousel = () => {
 const appOpen = () => {
 	const iconPlus = document.querySelectorAll('.icon-plus')
 	const appSelection = document.querySelectorAll('.app-selection')
+	const titleSelection = document.querySelectorAll('.title-selection')
 
 	iconPlus.forEach((icon, indexIcon) => {
-		appSelection.forEach((selection, indexSelection) => {
-			selection.setAttribute('data-numselection', indexSelection)
-		})
-
 		icon.setAttribute('data-numicon', indexIcon)
 
 		icon.addEventListener('click', (e) => {
@@ -138,6 +135,8 @@ const appOpen = () => {
 			appSelection[clickedIcon].classList.toggle('open')
 
 			iconPlus[clickedIcon].classList.toggle('open')
+
+			titleSelection[clickedIcon].classList.toggle('open')
 		})
 	})
 }

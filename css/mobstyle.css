@@ -225,12 +225,14 @@ section object.center-line {
 #app .container-selection {
 	width: 90%;
 	background-color: white;
+	margin-bottom: 1em;
+	position: static;
 }
 
 #app .container-selection .title-selection {
 	width: 100%;
 	font-size: 15px;
-	color: #cba36c;
+	color: black;
 	margin: 1em 0 2em;
 	padding: 0 1em;
 	display: inline-flex;

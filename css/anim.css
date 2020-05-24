@@ -419,4 +419,8 @@ span.icon-plus.open .bar-vertical {
 	-ms-transition: transform 0.3s ease;
 	-o-transition: transform 0.3s ease;
 }
+
+#app .container-selection .title-selection.open {
+	color: #cba36c;
+}
 /*-- APP OPEN/CLOSE ANIMATION --*/

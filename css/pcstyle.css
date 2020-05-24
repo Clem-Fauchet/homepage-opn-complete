@@ -353,14 +353,50 @@ svg#lecteur .circle {
 	background-color: #f5f6f6;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: flex-start;
+	position: relative;
 }
 
 #app h2 {
 	text-align: center;
 	font-family: var(--second-font);
 	font-size: var(--title-size);
+	margin: var(--title-margin);
 }
+
+/*--APP BUTTON NEXT PREVIOUS--*/
+#app .btn-arrow {
+	position: absolute;
+	width: 52px;
+	height: 52px;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	border-radius: 26px;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	-ms-border-radius: 26px;
+	-o-border-radius: 26px;
+}
+
+#app .btn-arrow#previous {
+	top: calc((612px / 2) + 52px);
+	left: 15.5%;
+	z-index: 150;
+}
+
+#app .btn-arrow#next {
+	top: calc((612px / 2) + 52px);
+	right: 15.5%;
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+}
+
+/*--APP BUTTON NEXT PREVIOUS--*/
 
 #app .container-selection {
 	display: flex;
@@ -368,27 +404,62 @@ svg#lecteur .circle {
 	align-items: center;
 	width: 100%;
 	justify-content: space-between;
+	position: absolute;
+	bottom: 2em;
 }
 
+/*-- POSITION EACH CONTAINER SELECTION --*/
+#app .container-selection.selection_1 {
+	z-index: 40;
+}
+
+#app .container-selection.selection_2 {
+	z-index: 30;
+}
+
+#app .container-selection.selection_3 {
+	z-index: 20;
+}
+#app .container-selection.selection_4 {
+	z-index: 10;
+}
+
+/*-- POSITION EACH CONTAINER SELECTION --*/
 #app .container-selection .app-selection {
 	margin-bottom: 1em;
 }
 
 #app .container-selection .title-selection {
-	width: 60%;
+	width: 70%;
 	font-size: 15px;
 	font-family: var(--main-font);
 	color: #6c6d72;
-	margin: 0 0 4em;
+	display: flex;
 }
 
-.title-selection h4 {
-	cursor: pointer;
+.container-selection.selection_1 .title-selection {
+	margin: 0 0% 4em;
+	justify-content: flex-start;
+}
+
+.container-selection.selection_2 .title-selection {
+	margin: 0 0% 4em 35%;
+	justify-content: flex-start;
+}
+
+.container-selection.selection_3 .title-selection {
+	margin: 0 35% 4em 0;
+	justify-content: flex-end;
+}
+
+.container-selection.selection_4 .title-selection {
+	margin: 0 0% 4em;
+	justify-content: flex-end;
 }
 
 .title-selection h4:focus,
 .title-selection h4:hover {
-	border-bottom: 3px solid #e4c291;
+	/* border-bottom: 3px solid #e4c291; */
 	display: inline;
 }
 
@@ -404,7 +475,7 @@ svg#lecteur .circle {
 
 #app .app-selection .description-selection {
 	position: relative;
-	width: 60%;
+	width: 65%;
 	height: 100%;
 	margin: auto;
 	background-color: white;
@@ -417,14 +488,14 @@ svg#lecteur .circle {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 3;
+	z-index: 300;
 }
 
 #app .app-selection img.phone {
 	position: absolute;
 	/* left: calc(50% - 262px / 2 - 276px); */
 	bottom: -20px;
-	z-index: 10;
+	z-index: 1000;
 }
 
 /*-- DESCRIPTION --*/
@@ -441,7 +512,7 @@ svg#lecteur .circle {
 .app-selection .description h5 {
 	font-family: var(--second-font);
 	font-size: var(--nav-size);
-	z-index: 5;
+	z-index: 500;
 	text-transform: uppercase;
 }
 
@@ -449,14 +520,14 @@ svg#lecteur .circle {
 	color: #6c6d72;
 	font-family: var(--main-font);
 	font-size: 15px;
-	z-index: 5;
+	z-index: 500;
 	width: 90%;
 }
 
 #app .app-selection #previous,
 #next {
 	position: absolute;
-	z-index: 50;
+	z-index: 5000;
 	top: calc(50% - 52px / 2);
 }
 
@@ -606,3 +677,4 @@ svg#lecteur .circle {
 }
 
 /*********** FOURTH SECTION *****************/
+}
