@@ -233,10 +233,14 @@ section object.center-line {
 	width: 100%;
 	font-size: 15px;
 	color: black;
-	margin: 1em 0 2em;
+	margin: 1em 0 1em;
 	padding: 0 1em;
 	display: inline-flex;
 	justify-content: space-between;
+}
+
+#app .container-selection.current-slide .title-selection h4 {
+	border-bottom: none;
 }
 
 /*-- ICON PLUS --*/

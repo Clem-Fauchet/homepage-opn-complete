@@ -389,7 +389,7 @@ header.mobile .burger.cross .line_3 {
 
 /*-- APP OPEN/CLOSE ANIMATION --*/
 #app .container-selection .app-selection.open {
-	height: 80vh;
+	height: 105vh;
 	transition: height 0.5s ease-in-out;
 	-webkit-transition: height 0.5s ease-in-out;
 	-moz-transition: height 0.5s ease-in-out;

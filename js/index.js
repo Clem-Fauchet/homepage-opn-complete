@@ -18,9 +18,9 @@ const Cocktail = (urlImage) => {
 	document.getElementById('cocktails').appendChild(cloneCocktail)
 }
 
-Cocktail('../assets/img/blog/cocktail-2.png')
-Cocktail('../assets/img/blog/cocktail-3.png')
-Cocktail('../assets/img/blog/cocktail-4.png')
+Cocktail('./assets/img/blog/cocktail-2.png')
+Cocktail('./assets/img/blog/cocktail-3.png')
+Cocktail('./assets/img/blog/cocktail-4.png')
 
 /*****PC NAVIGATION ANIMATION ****/
 const attributeFocusNav = () => {
@@ -29,9 +29,52 @@ const attributeFocusNav = () => {
 	linkFocus.style.outline = 'none'
 }
 
+//APP ANIMATION
+const selection = () => {
+	const previousBtn = document.getElementById('previous')
+	const nextBtn = document.getElementById('next')
+
+	const containerSelection = document.querySelectorAll('.container-selection')
+
+	//attribution container dataset
+	containerSelection.forEach((container, indexContainer) => {
+		container.setAttribute('data-numselection', indexContainer)
+		const containerData = container.getAttribute('data-numselection')
+
+		let i = 0
+
+		nextBtn.addEventListener('click', (e) => {
+			if (i < 3) {
+				i++
+
+				containerSelection[i - 1].classList.remove('current-slide')
+				containerSelection[i].classList.add('current-slide')
+
+				console.log(i)
+			} else {
+				return
+			}
+		})
+
+		previousBtn.addEventListener('click', (e) => {
+			if (i > 0) {
+				i--
+
+				containerSelection[i + 1].classList.remove('current-slide')
+				containerSelection[i].classList.add('current-slide')
+
+				console.log(i)
+			} else {
+				return
+			}
+		})
+	})
+}
+
 /***** FUNCTION PC CALL ******/
 const appPC = () => {
 	attributeFocusNav()
+	selection()
 }
 
 appPC()
