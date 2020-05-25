@@ -220,7 +220,25 @@ section object.center-line {
 #app h2 {
 	width: 90%;
 	margin: var(--title-margin);
+	margin-bottom: 5em;
 }
+
+/*--APP BUTTON STORE--*/
+#app .app-button {
+	width: 100%;
+	top: 150px;
+	z-index: 20;
+	left: 0%;
+	bottom: initial;
+}
+
+#app .app-button button {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	margin: auto;
+}
+/*--APP BUTTON STORE--*/
 
 #app .container-selection {
 	width: 90%;
@@ -241,6 +259,10 @@ section object.center-line {
 
 #app .container-selection.current-slide .title-selection h4 {
 	border-bottom: none;
+}
+
+#app .container-selection .title-selection.open h4 {
+	color: #dfb57b;
 }
 
 /*-- ICON PLUS --*/
@@ -294,6 +316,7 @@ span.icon-plus .bar-vertical {
 /*-- ICON PLUS --*/
 #app .container-selection .app-selection {
 	height: 0;
+	opacity: 1;
 	overflow-y: hidden;
 	border-top: none;
 	margin-bottom: 0em;
@@ -346,7 +369,7 @@ span.icon-plus .bar-vertical {
 
 #blog {
 	height: auto;
-	width: 100%;
+	width: 375px;
 }
 
 #blog .blog-separation {

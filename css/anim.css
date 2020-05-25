@@ -388,7 +388,8 @@ header.mobile .burger.cross .line_3 {
 /*-- CAROUSEL ANIMATION --*/
 
 /*-- APP OPEN/CLOSE ANIMATION --*/
-#app .container-selection .app-selection.open {
+#app .container-selection .app-selection.open,
+#app .container-selection.current-slide .app-selection.open {
 	height: 105vh;
 	transition: height 0.5s ease-in-out;
 	-webkit-transition: height 0.5s ease-in-out;
@@ -420,7 +421,42 @@ span.icon-plus.open .bar-vertical {
 	-o-transition: transform 0.3s ease;
 }
 
-#app .container-selection .title-selection.open {
-	color: #cba36c;
-}
 /*-- APP OPEN/CLOSE ANIMATION --*/
+
+/*-- APP CAROUSEL ANIMATION --*/
+
+#app .container-selection.current-slide .app-selection {
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-ms-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+}
+
+#app .container-selection .app-selection {
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-ms-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+}
+
+#app button.btn-arrow:hover#previous {
+	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	-o-transform: scale(1.05);
+}
+
+#app button.btn-arrow:hover#next {
+	transform: scale(1.05) rotate(180deg);
+	-webkit-transform: scale(1.05) rotate(180deg);
+	-moz-transform: scale(1.05) rotate(180deg);
+	-ms-transform: scale(1.05) rotate(180deg);
+	-o-transform: scale(1.05) rotate(180deg);
+}
+
+/*-- APP CAROUSEL ANIMATION --*/

@@ -364,7 +364,7 @@ svg#lecteur .circle {
 	margin: var(--title-margin);
 }
 
-/*--APP BUTTON NEXT PREVIOUS--*/
+/*--APP BUTTON STORE--*/
 #app .btn-arrow {
 	position: absolute;
 	width: 52px;
@@ -378,6 +378,18 @@ svg#lecteur .circle {
 	-moz-border-radius: 26px;
 	-ms-border-radius: 26px;
 	-o-border-radius: 26px;
+}
+
+#app button svg.arrow {
+	width:100%;
+	height: 100%;
+}
+
+#app  .btn-arrow#previous,
+.btn-arrow#next {
+	position: absolute;
+	z-index: 5000;
+	top: calc(50% - 52px / 2);
 }
 
 #app .btn-arrow#previous {
@@ -397,6 +409,26 @@ svg#lecteur .circle {
 }
 
 /*--APP BUTTON NEXT PREVIOUS--*/
+
+/*--APP BUTTON STORE--*/
+#app .app-button {
+	position: absolute;
+	display: inline-flex;
+	justify-content: center;
+	width: 25%;
+	bottom: 4em;
+	z-index: 41;
+	left: 45%;
+}
+
+#app .app-button button {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	margin: auto;
+	cursor: pointer;
+}
+/*--APP BUTTON STORE--*/
 
 #app .container-selection {
 	display: flex;
@@ -512,22 +544,6 @@ svg#lecteur .circle {
 	font-size: 15px;
 	z-index: 500;
 	width: 90%;
-}
-
-#app .app-selection #previous,
-#next {
-	position: absolute;
-	z-index: 5000;
-	top: calc(50% - 52px / 2);
-}
-
-#app .app-selection #previous {
-	left: calc(0% - 52px / 2);
-}
-
-#app .app-selection #next {
-	right: calc(0% - 52px / 2);
-	transform: rotate(180deg);
 }
 
 /*********** THIRD SECTION *****************/
