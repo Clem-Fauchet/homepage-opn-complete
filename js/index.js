@@ -29,6 +29,18 @@ const attributeFocusNav = () => {
 	linkFocus.style.outline = 'none'
 }
 
+//STICKY BAR
+const scrollBar = () => {
+	const stickyBar = document.getElementById('sticky-bar')
+
+	window.addEventListener('scroll', () => {
+		const offset = window.pageYOffset
+		offset > 900
+			? stickyBar.classList.add('on')
+			: stickyBar.classList.remove('on')
+	})
+}
+
 //APP ANIMATION
 const selection = () => {
 	const previousBtn = document.getElementById('previous')
@@ -73,6 +85,7 @@ const selection = () => {
 
 /***** FUNCTION PC CALL ******/
 const appPC = () => {
+	scrollBar()
 	attributeFocusNav()
 	selection()
 }

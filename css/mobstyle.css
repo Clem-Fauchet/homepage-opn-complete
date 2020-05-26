@@ -13,7 +13,6 @@ section {
 header {
 	height: 60px;
 	width: 375px;
-	/* background-color: white; */
 	justify-content: space-around;
 	padding: 1em;
 }
