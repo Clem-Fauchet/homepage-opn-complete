@@ -24,7 +24,7 @@
             d="M24.3327 19.0001C24.4228 18.9985 24.5098 19.0329 24.5746 19.0956L25.2059 19.7072C25.3406 19.8377 25.3442 20.0527 25.2138 20.1876L21.3103 24.2254H32.4106C32.598 24.2254 32.75 24.3775 32.75 24.5651V25.4349C32.75 25.6225 32.598 25.7746 32.4106 25.7746H21.2568L25.2122 29.8108C25.2755 29.8754 25.3105 29.9626 25.3093 30.0531C25.3081 30.1436 25.2709 30.2299 25.2059 30.2928L24.5746 30.9044C24.4404 31.0343 24.2266 31.0315 24.096 30.898L18.5967 25.2783C18.4678 25.1463 18.4678 24.9353 18.5967 24.8033L18.8939 24.4991L24.0942 19.1039C24.1568 19.0389 24.2426 19.0016 24.3327 19.0001Z"
             fill="white" />
         </symbol>
-        </defs>
+      </defs>
 
 
 
@@ -58,7 +58,10 @@
 
       <!-- LEFT NAV -->
       <nav class='left-nav'>
-        <object class='home' type="image/svg+xml" data="assets/icons/header/home.svg" width="16"></object>
+     
+        <!-- HOME BUTTON -->
+        <button class='home'><a href='index.html'><img src='./assets/icons/header/home.svg' alt='home' width="16"/></a></button>
+        <!-- HOME BUTTON -->
         <li class='big-menu'>La Boutique <object class='center-line' type="image/svg+xml" data="assets/icons/line.svg"
             width='16'></object></li>
         <li><a id='current' href='#'>Le bar connecté</a></li>
@@ -68,9 +71,31 @@
 
       <!-- RIGHT NAV -->
       <div class='logo'>
-        <img src='assets/icons/header/logo.png' />
-        <object type="image/svg+xml" data="assets/icons/header/logo.svg"></object>
+      
+        <!-- LOGO SVG -->
+        <svg class='logo-svg' width="100" height="33" viewBox="0 0 100 33" 
+          xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0)">
+            <path d="M83.8352 30.4148L86.1271 32.022L100 12.2077L97.7082 10.6063" fill="#E4C291" />
+            <path class='logo-path'
+              d="M53.7567 6.79431C53.7567 9.43429 52.0799 10.8906 49.0396 10.8906L39.5995 10.8906L39.5995 2.73281L49.0396 2.73281C52.1263 2.73281 53.7567 4.13693 53.7567 6.79431ZM48.97 -3.38583e-07L36.6984 -8.74989e-07L36.6984 24.0209L39.5995 24.0209L39.5995 13.6234L48.97 13.6234C53.8205 13.6234 56.7158 11.0589 56.7158 6.7595C56.7158 2.46591 53.896 -1.23259e-07 48.97 -3.38583e-07Z"
+              fill="white" />
+            <path class='logo-path'
+              d="M79.6692 -1.22498e-07L79.6692 18.8744L64.7113 0.139251L64.6011 -7.81149e-07L61.3983 -9.21147e-07L61.3983 24.0209L64.2297 24.0209L64.2297 3.96287L80.3423 24.0499L80.4525 24.1891L82.4717 24.1891L82.4717 0"
+              fill="white" />
+            <path class='logo-path'
+              d="M16.008 2.89526C23.2375 2.89526 29.1208 8.77864 29.1208 16.0081C29.1208 23.2376 23.2375 29.121 16.008 29.121C8.77852 29.121 2.89514 23.2376 2.89514 16.0081C2.89514 8.77864 8.77852 2.89526 16.008 2.89526ZM16.008 -8.32913e-06C7.16552 -8.71565e-06 -0.000137642 7.16564 -0.000138029 16.0081C-0.000138415 24.8506 7.16552 32.0162 16.008 32.0162C24.8505 32.0162 32.0161 24.8506 32.0161 16.0081C32.0161 7.16564 24.8505 -7.94262e-06 16.008 -8.32913e-06Z"
+              fill="white" />
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <path d="M100 0L100 32.022L-1.39973e-06 32.022L0 -4.37114e-06L100 0Z" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+        <!-- LOGO SVG -->
       </div>
+
       <nav class='right-nav'>
         <div class='right-link'>
           <li class='big-menu'>Le Média <object class='center-line' type="image/svg+xml" data="assets/icons/line.svg"
@@ -80,11 +105,49 @@
           <li><a href='#'>Recevoir</a></li>
         </div>
         <div class='right-icon'>
-          <object class='top-icon' type="image/svg+xml" data="assets/icons/header/search.svg" width="15"></object>
-          <object class='top-icon' type="image/svg+xml" data="assets/icons/header/user.svg" width="16"></object>
+
+          <div class='search-box'>
+            <!-- LOUPE SVG -->
+            <button class='top-icon'>
+              <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="15">
+                <path fill-rule="evenodd" clip-rule="evenodd" class='path-mobile'
+                  d="M8.9839 0C6.58835 0 4.32794 0.933094 2.62746 2.63284C-0.875819 6.13459 -0.875819 11.8384 2.62746 15.3402C4.32777 17.0398 6.57941 17.973 8.9839 17.973C10.9876 17.973 12.8894 17.323 14.4528 16.1208L17.9886 19.6551C18.2244 19.8908 18.5295 20 18.8272 20C19.1203 20 19.4301 19.8936 19.6617 19.6505C20.1143 19.1931 20.1128 18.4428 19.6571 17.9873L16.1213 14.453C17.324 12.8903 17.9743 10.9894 17.9743 8.98652C17.9743 6.59201 17.0408 4.33258 15.3403 2.63284C13.64 0.93326 11.3884 0 8.9839 0ZM9 16C12.866 16 16 12.866 16 9C16 5.13401 12.866 2 9 2C5.13401 2 2 5.13401 2 9C2 12.866 5.13401 16 9 16Z"
+                  fill="#FFF" />
+              </svg>
+            </button>
+            <!-- LOUPE SVG -->
+          </div>
+
+          <!-- USER SVG -->
+          <button class='top-icon'>
+            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" width="16">
+              <path class='path-mobile'
+                d="M6.37309 9.11544C6.62508 9.04873 6.81778 8.82639 6.84001 8.55957C6.86225 8.29276 6.72884 8.04077 6.48426 7.92218C5.51335 7.44043 4.91302 6.48435 4.91302 5.41709C4.91302 3.86808 6.17298 2.60812 7.72199 2.60812C9.27099 2.60812 10.531 3.86808 10.531 5.41709C10.531 6.48435 9.92321 7.44043 8.9523 7.92218C8.71513 8.04077 8.57431 8.29276 8.59655 8.55957C8.61878 8.82639 8.80407 9.04132 9.06347 9.11544C11.072 9.66389 12.5247 11.376 12.7841 13.3919H2.6525C2.9045 11.3685 4.36457 9.65648 6.37309 9.11544ZM3.63082 5.41709C3.63082 6.53623 4.08293 7.57384 4.86114 8.32982C2.73403 9.38966 1.33325 11.5909 1.33325 14.0293C1.33325 14.385 1.6223 14.6667 1.97064 14.6667H13.4733C13.8291 14.6667 14.1107 14.3776 14.1107 14.0293C14.1107 11.5909 12.7099 9.38966 10.5754 8.32982C11.3536 7.57384 11.8057 6.53623 11.8057 5.41709C11.8131 3.16398 9.97509 1.33334 7.72199 1.33334C5.46888 1.33334 3.63082 3.16398 3.63082 5.41709Z"
+                fill="white" />
+            </svg>
+          </button>
+          <!-- USER SVG -->
+
           <span class='notif'>
-            <object type="image/svg+xml" data="assets/icons/header/cart.svg" width="16"></object>
-            <object type="image/svg+xml" data="assets/icons/header/item.svg" width="16"></object>
+
+            <!-- CART SVG -->
+            <button>
+              <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" width='16'>
+                <path class='path-mobile'
+                  d="M11.0721 3.08092H13.7944C14.0921 3.08092 14.3333 3.31506 14.3333 3.60396V14.4309C14.3333 15.3641 13.7391 16 12.7166 16H2.61671C1.7252 16 1 15.2962 1 14.4309V3.60396C1 3.31506 1.24124 3.08092 1.5389 3.08092H4.26132C4.46016 1.34862 5.91142 -1.48682e-07 7.66667 0C9.42545 1.48982e-07 10.874 1.34583 11.0721 3.08092ZM11.0952 4.127V4.65088C11.4109 4.65088 11.6667 4.91113 11.6667 5.23224C11.6667 5.55335 11.4109 5.8136 11.0952 5.8136H9.95238C9.63675 5.8136 9.38095 5.55335 9.38095 5.23224C9.38095 4.91113 9.63675 4.65088 9.95238 4.65088V4.127H5.38095V4.65088C5.69658 4.65088 5.95238 4.91113 5.95238 5.23224C5.95238 5.55335 5.69658 5.8136 5.38095 5.8136H4.23809C3.92247 5.8136 3.66667 5.55335 3.66667 5.23224C3.66667 4.91113 3.92247 4.65088 4.23809 4.65088V4.127H2.0778V12.1818H13.2555V4.127H11.0952ZM9.91746 3.08092C9.72823 1.9907 8.79261 1.16272 7.66667 1.16272C6.54292 1.16272 5.60587 1.99221 5.41604 3.08092H9.91746ZM2.0778 14.4309V13.2279H13.2555V14.4309C13.2555 14.7194 13.0139 14.954 12.7166 14.954H2.61671C2.31947 14.954 2.0778 14.7194 2.0778 14.4309Z"
+                  fill="white" />
+              </svg>
+            </button>
+            <!-- CART SVG -->
+
+            <!-- NOTIFICATION SVG -->
+            <svg class='notification' width='16' viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg" width='16'>
+              <circle class='notif-path' cx="8" cy="9" r="8" fill="white" />
+              <path class='notif-path-number' d="M9.17159 5.157H8.08259L5.79459 6.543V7.907L7.71959 6.807V13H9.17159V5.157Z" fill="#DFB57B" />
+            </svg>
+
+            <!-- NOTIFICATION SVG -->
+            </svg>
           </span>
         </div>
       </nav>
@@ -240,18 +303,18 @@
       </button>
       <!-- BUTTON NEXT/PREVIOUS -->
 
-        <!-- BUTTON NEXT/PREVIOUS -->
-        <div class='app-button'>
-          <button >
-            <img href='#' src='./assets/img/app/googleplay.png' alt='google play' />
-          </button>
-    
-          <button >
-            <img href='#' src='./assets/img/app/appstore.png' alt='apple store'/>
-          </button>
-        </div>
+      <!-- BUTTON NEXT/PREVIOUS -->
+      <div class='app-button'>
+        <button>
+          <img href='#' src='./assets/img/app/googleplay.png' alt='google play' />
+        </button>
 
-        <!-- BUTTON NEXT/PREVIOUS -->
+        <button>
+          <img href='#' src='./assets/img/app/appstore.png' alt='apple store' />
+        </button>
+      </div>
+
+      <!-- BUTTON NEXT/PREVIOUS -->
 
 
 

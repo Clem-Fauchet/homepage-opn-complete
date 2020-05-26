@@ -15,11 +15,33 @@ header {
 	width: 375px;
 	justify-content: space-around;
 	padding: 1em;
+	position: fixed;
+}
+
+header button.home {
+	display: none;
+}
+
+header div.logo {
+	margin: 0 1em;
+}
+
+header .logo svg.logo-svg {
+	width: 70px;
+}
+
+header nav.right-nav {
+	margin: auto;
+}
+
+header nav.right-nav .right-icon {
+	width: 70%;
 }
 
 /*-- BURGER MENU --*/
 header .burger {
 	display: block;
+	margin: auto;
 }
 
 header .burger div {
@@ -45,22 +67,6 @@ header nav.right-nav {
 	width: 60%;
 	padding: 0;
 	justify-content: space-around;
-}
-
-header nav.right-nav .right-icon object {
-	width: 18px;
-}
-
-header object.home {
-	display: none;
-}
-
-header div.logo {
-	margin: 0 1em;
-}
-
-header div.logo img {
-	width: 70px;
 }
 
 /****** HEADER *****/
@@ -313,7 +319,8 @@ span.icon-plus .bar-vertical {
 }
 
 /*-- ICON PLUS --*/
-#app .container-selection .app-selection {
+#app .container-selection .app-selection,
+#app .container-selection.current-slide .app-selection {
 	height: 0;
 	opacity: 1;
 	overflow-y: hidden;

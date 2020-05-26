@@ -1,3 +1,5 @@
+let viewportWidth = window.innerWidth
+
 /******* PC CLONAGE ITEMS BLOG  *********/
 const Article = () => {
 	const cloneArticle = document.querySelector('.article-item').cloneNode(true)
@@ -85,14 +87,29 @@ const selection = () => {
 
 /***** FUNCTION PC CALL ******/
 const appPC = () => {
-	scrollBar()
 	attributeFocusNav()
 	selection()
+
+	if (viewportWidth >= 991) {
+		scrollBar()
+	}
 }
 
 appPC()
 
 /*****************************************************************/
+
+/*****STICKY HEADER SCROLL ****/
+const scrollHeader = () => {
+	const headerMobile = document.querySelector('header')
+
+	window.addEventListener('scroll', () => {
+		const offset = window.pageYOffset
+		offset > 10
+			? headerMobile.classList.add('sticky')
+			: headerMobile.classList.remove('sticky')
+	})
+}
 
 /*****MOBILE NAVIGATION ANIMATION ****/
 
@@ -199,13 +216,12 @@ const appOpen = () => {
 
 /***** FUNCTION MOBILE CALL ******/
 const app = () => {
-	let viewportWidth = window.innerWidth
-
 	navMobile()
 
 	if (viewportWidth <= 991) {
 		blogCarousel()
 		appOpen()
+		scrollHeader()
 	}
 }
 

@@ -42,7 +42,6 @@
 
 #sticky-bar.on .bar button:hover::before {
 	opacity: 1;
-	background-color: white;
 	transform: rotate3d(0, 0, 1, 0deg);
 	transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
 	-webkit-transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
@@ -231,7 +230,6 @@ header nav li a:focus::before {
 		z-index: 9999999;
 		height: 100vh;
 		width: 335px;
-		background-color: #f5f6f6;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
@@ -379,6 +377,50 @@ header nav li a:focus::before {
 }
 
 /*-- ANIMATION LINK --*/
+/*-- HEADER SCROLL --*/
+header.sticky {
+	background-color: white;
+}
+
+header.sticky .right-nav {
+	height: 40px;
+	align-items: baseline;
+}
+
+header.sticky button svg,
+header.sticky svg.notification {
+	width: 24px;
+}
+
+header.sticky button.top-icon:nth-child(2) svg {
+	width: 25px;
+}
+
+header.sticky .burger div {
+	background-color: black;
+}
+
+header.sticky svg .path-mobile,
+header.sticky svg .logo-path {
+	fill: black;
+}
+
+header.sticky svg .notif-path {
+	fill: #cba36c;
+}
+
+header.sticky svg .notif-path-number {
+	fill: white;
+}
+
+/*-- HEADER SCROLL --*/
+header.mobile {
+	background-color: #f5f6f6;
+}
+
+header.mobile .logo svg.logo-svg .logo-path {
+	fill: black;
+}
 
 /*-- BURGER ANIMATION --*/
 header.mobile .burger {
